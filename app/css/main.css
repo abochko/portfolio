@@ -181,6 +181,7 @@ body {
   float: left;
   margin-top: 158px;
   width: 250px;
+  z-index: -999;
 }
 
 .navigation {
@@ -455,7 +456,6 @@ body {
 
 /* -------------------- Footer -------------------- */
 .footer {
-  position: relative;
   width: 100%;
   line-height: 80px;
   background-color: #eff3f7;
@@ -463,15 +463,33 @@ body {
 }
 
 .container-footer{
+  position: relative;
   margin: auto;
   height: 100%;
-  width: 65%;
+  width: 960px;
 }
 
 .lock-unlock {
   float: left;
   margin-top: 20px;
   margin-left: 33px;
+}
+
+.lock-unlock .enter {
+  display: block;
+  height: 40px;
+  font-family: 'fira_sansbook';
+  font-size: 16px;
+  line-height: 2.2;
+  color: #4a545d;
+  text-decoration: none;
+  background-position: -107px -5px;
+  padding-left: 30px;
+}
+
+.lock-unlock .enter:hover {
+    text-decoration: underline;   
+    background-position: -107px -47px;
 }
 
 .copyright {
@@ -483,14 +501,5 @@ body {
   font-size: 13px;
 }
 
-.lock {
-    width: 20px;
-    height: 32px;
-    background-position: -107px -5px;
-}
 
-.lock:hover {
-    width: 20px;
-    height: 32px;
-    background-position: -107px -47px;
-}
+
