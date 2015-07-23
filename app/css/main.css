@@ -1,0 +1,494 @@
+
+@font-face {
+    font-family: 'fira_sanslight';
+    src: url('../fonts/firasans-light.eot');
+    src: url('../fonts/firasans-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/firasans-light.woff') format('woff'),
+         url('../fonts/firasans-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fira_sansbook';
+    src: url('../fonts/firasans-book.eot');
+    src: url('../fonts/firasans-book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/firasans-book.woff') format('woff'),
+         url('../fonts/firasans-book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fira_sansmedium';
+    src: url('../fonts/firasans-medium.eot');
+    src: url('../fonts/firasans-medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/firasans-medium.woff') format('woff'),
+         url('../fonts/firasans-medium.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proximanova_condensed';
+    src: url('../fonts/ProximaNovaCond-Semibold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/bgr.png);
+    width: 100%;
+    font-family: 'fira_sanslight', Arial, sans-serif;
+}
+
+.texthide { /* хак для уборки текста у ссылок */
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " "; 
+    display: table;
+}
+ 
+.clearfix:after {
+    clear: both;
+}
+
+.line-gradient { /* линия с градиентом под шапкой и над футером */
+    height  : 3px;
+    width   : 100%;
+    background: linear-gradient(
+        to right, 
+        rgba(0,0,0,0), 
+        #307386, 
+        rgba(0,0,0,0)) repeat 0;
+}
+
+.icons {
+    background-image: url(../images/icons.png);
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+}
+
+.wrapper { /* главная обертка */
+    /*min-width: 1024px;*/
+    height: auto;
+    min-height: 100%;
+    position: relative;
+}
+
+/* ----------- Header Start -------------- */
+
+.header { 
+    position: fixed;
+    width: 100%;
+    height: 119px;
+    background-color: #eff3f7;
+    z-index: 1000;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+}
+
+.container-header { /* обертка контейнер для логотипа и иконок соцсетей */
+    margin: auto;
+    height: 100%;
+    width: 960px;
+ }
+
+ .logo { /* смещаем в контейнере блок с логотипом влево */
+    float:left;
+    margin-top: 38px;
+ }
+
+ /* -------------- Socials Start ------------ */
+
+.socials { /* смещаем в контейнере блок с иконками вправо */
+    margin-top: 34px;
+    float: right;
+}
+
+.socials-inline {  /* иконки в ряд! */
+    display: inline-block;
+}
+
+.socials-button {
+    background: url(../images/socials.png) repeat 0;
+    display: block;
+    width: 47px;
+    height: 47px;
+    margin-left: 24px;
+    overflow: hidden;
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    -ms-transform-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -ms-transform-property: -ms-transform;
+    transition-property: transform;    
+}
+
+.socials-button:hover {
+    -moz-transitiom: rotate(360deg);
+    -webkit-transition: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.socials-vk {background-position: -5px -119px;}
+.socials-tw {background-position: -119px -5px;}
+.socials-fb {background-position: -5px -5px;}
+.socials-git {background-position: -5px -62px;}
+
+
+.socials-vk:hover {background-position: -62px -119px;}
+.socials-tw:hover {background-position: -119px -62px;}
+.socials-fb:hover {background-position: -62px -5px;}
+.socials-git:hover {background-position: -62px -62px;}
+
+/* ----------- Socails End ---------*/
+/* ----------- Header End --------------*/ 
+
+
+/* -------------------- Content -------------------- */
+.summary {
+    position: relative;
+    width: 100%;
+}
+
+.container-main {
+  margin: auto;
+  height: 100%;
+  width: 960px;
+}
+
+/* -------------------- Sidebar -------------------- */
+.sidebar {
+  float: left;
+  margin-top: 158px;
+  width: 250px;
+  font-family: 'fira_sanslight', Arial, sans-serif;
+  font-size: 21px;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #eff3f7;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.menu-item {
+  position: relative;
+  line-height: 73px;
+  padding-left: 28px;
+}
+
+.menu-item:first-child {
+  border-radius: 3px 3px 0 0;
+
+}
+
+.menu-item:last-child {
+  border-radius: 0 0 3px 3px;
+}
+
+.menu-item.active {
+  font-size: 22px;
+  background-color: #3ba8c0;
+  color: #ffffff;
+}
+
+.menu-item:nth-last-child(n+2):after {
+  content : " ";
+  position: absolute;
+  left    : 10px;
+  bottom  : 0;
+  width   : 230px;
+  border-bottom: 2px solid #3ba8c0;
+}
+
+.menu-item>a {
+  text-decoration: none;
+  color: #55636e;
+}
+
+.menu-item>a:hover {
+  text-decoration: none;
+  color: #3ba8c0;
+}
+
+.contacts {
+  margin: 0;
+  padding: 0;
+  margin-top: 23px;
+  list-style-type: none;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.contacts-header {
+  border-radius: 3px 3px 0 0;
+  line-height: 40px;
+  padding-left: 30px;
+  background-color: #3ba8c0;
+}
+
+.contacts-mail {
+  height: 35px;
+  padding-left: 20px;
+  padding-top: 8px;
+  background-color: #41b9d4;
+  font-style: normal;
+}
+
+.contacts-phone {
+  height: 35px;
+  padding-left: 20px;
+  padding-top: 8px;
+  background-color: #48cbe8;
+  font-style: normal;
+}
+
+.contacts-skype {
+  border-radius: 0 0 4px 4px;
+  height: 35px;
+  padding-left: 20px;
+  padding-top: 8px;
+  background-color: #51daf8;
+  font-style: normal;
+}
+
+.contacts a {
+  vertical-align: top;
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
+
+.mail {
+    width: 21px;
+    height: 20px;
+    background-position: -5px -89px;
+}
+
+.phone {
+    width: 21px;
+    height: 20px;
+    background-position: -36px -89px;
+}
+
+.skype {
+    width: 21px;
+    height: 20px;
+    background-position: -67px -89px;
+}
+
+/* -------------------- Section -------------------- */
+.section {
+  float: right;
+  margin-top: 158px;
+  width: 650px;
+  color: #55636e;
+  margin-bottom: 10px;
+}
+
+.article {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  background-color: #eff3f7;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.h2 {
+  margin: 0;
+  padding: 0 20px 0 20px;
+  display: inline-block;
+  line-height: 67px;
+  border-bottom: 2px solid #3ba8c0;
+  color: #3ba8c0;
+  font-family: 'fira_sansbook', Arial, sans-serif;
+  font-size: 27px;
+  font-weight: normal;
+}
+
+.article-body {
+  padding-left: 55px;
+  padding-top: 18px;
+}
+
+.article-photo {
+  display: inline-block;
+  margin-top: 17px;
+  border: 3px solid #3ba8c0;
+  border-radius: 50%;
+}
+
+.article-list {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  list-style-type: none;
+}
+
+.article-item {
+  margin-bottom: 6px;
+}
+
+.article-point {
+  display: inline-block;
+  vertical-align: baseline;
+  padding-left: 20px;
+  font-family: 'fira_sansmedium', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.article-descript {
+  display: inline-block;
+  vertical-align: baseline;
+  padding-left: 13px;
+  font-family: 'fira_sansbook', Arial, sans-serif;
+  font-size: 16px;
+}
+
+.article-skills {
+  display: inline-block;
+  vertical-align: top;
+  width: 230px;
+  padding-left: 13px;
+  font-family: 'fira_sansbook', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.skills {
+  display: inline-block;
+  padding: 0px 14px;
+  margin: 4px 2px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'proximanova_condensed', Arial, sans-serif;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3ba8c0+50,2e8ca2+50 */
+  background: #2e8ca2; /* Old browsers */
+  background: -moz-linear-gradient(top,  #3ba8c0 50%, #2e8ca2 50%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#3ba8c0), color-stop(50%,#2e8ca2)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #3ba8c0 50%,#2e8ca2 50%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #3ba8c0 50%,#2e8ca2 50%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #3ba8c0 50%,#2e8ca2 50%); /* IE10+ */
+  background: linear-gradient(to bottom,  #3ba8c0 50%,#2e8ca2 50%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 ); /* IE6-9 */
+}
+
+.bag {
+    width: 41px;
+    height: 34px;
+    background-position: -5px -5px;
+}
+
+.article-icon {
+  float: left;
+  margin-top: 10px;
+}
+
+.article-item-experience, .article-item-edu {
+  margin-bottom: 15px;
+}
+
+.article-experience, .article-edu {
+  margin: 0;
+  padding: 0 50px 0 70px;
+  font-family: 'fira_sansbook', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.article-date {
+  margin: 0;
+  padding: 0;
+  padding-left: 70px;
+  font-family: 'fira_sanslight', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.hat {
+    width: 41px;
+    height: 23px;
+    background-position: -56px -5px;
+}
+
+.cert {
+    width: 41px;
+    height: 32px;
+    background-position: -56px -38px;
+}
+
+/* -------------------- Footer -------------------- */
+.footer {
+  position: relative;
+  width: 100%;
+  line-height: 80px;
+  background-color: #eff3f7;
+  box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, .2);
+}
+
+.container-footer{
+  margin: auto;
+  height: 100%;
+  width: 65%;
+}
+
+.lock-unlock {
+  float: left;
+  margin-top: 20px;
+  margin-left: 33px;
+}
+
+.copyright {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #55636e;
+  font-family: 'fira_sanslight', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.lock {
+    width: 20px;
+    height: 32px;
+    background-position: -107px -5px;
+}
+
+.lock:hover {
+    width: 20px;
+    height: 32px;
+    background-position: -107px -47px;
+}
