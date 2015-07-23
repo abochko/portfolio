@@ -48,14 +48,6 @@ body {
     font-family: 'fira_sanslight', Arial, sans-serif;
 }
 
-.texthide { /* хак для уборки текста у ссылок */
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
-}
-
 .clearfix:before, .clearfix:after {
     content: " "; 
     display: table;
@@ -83,8 +75,8 @@ body {
 }
 
 .wrapper { /* главная обертка */
-    /*min-width: 1024px;*/
-    height: auto;
+    min-width: 970px;
+    height: auto!important;
     min-height: 100%;
     position: relative;
 }
@@ -96,30 +88,43 @@ body {
     width: 100%;
     height: 119px;
     background-color: #eff3f7;
+    margin-bottom: 39px;
     z-index: 1000;
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
 }
 
-.container-header { /* обертка контейнер для логотипа и иконок соцсетей */
+.container-header { /* контейнер для логотипа и иконок соцсетей */
+    position: relative;
     margin: auto;
     height: 100%;
-    width: 960px;
+    width: 1200px;
  }
 
  .logo { /* смещаем в контейнере блок с логотипом влево */
-    float:left;
-    margin-top: 38px;
+    position: absolute;
+    top: 39px;
+    left: 0;
  }
 
  /* -------------- Socials Start ------------ */
 
-.socials { /* смещаем в контейнере блок с иконками вправо */
-    margin-top: 34px;
-    float: right;
+.socials {
+    position: absolute;
+    right: 0;
+    top: 36px;
+    margin: 0;
+    padding: 0;
+    min-width: 260px;
 }
 
-.socials-inline {  /* иконки в ряд! */
+.socials-inline { 
+    list-style: none;
     display: inline-block;
+    text-indent: -9999px;
+}
+
+.socials .socials-inline:first-child {
+    margin-left: 0;
 }
 
 .socials-button {
@@ -128,22 +133,21 @@ body {
     width: 47px;
     height: 47px;
     margin-left: 24px;
-    overflow: hidden;
     -webkit-transition-duration: 0.8s;
     -moz-transition-duration: 0.8s;
     -o-transition-duration: 0.8s;
-    -ms-transform-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
     transition-duration: 0.8s;
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     -o-transition-property: -o-transform;
-    -ms-transform-property: -ms-transform;
+    -ms-transition-property: -ms-transform;
     transition-property: transform;    
 }
 
 .socials-button:hover {
-    -moz-transitiom: rotate(360deg);
-    -webkit-transition: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -165,71 +169,69 @@ body {
 
 
 /* -------------------- Content -------------------- */
-.summary {
-    position: relative;
-    width: 100%;
-}
 
 .container-main {
   margin: auto;
-  height: 100%;
   width: 960px;
 }
 
 /* -------------------- Sidebar -------------------- */
 .sidebar {
+  position: fixed;
   float: left;
   margin-top: 158px;
   width: 250px;
-  font-family: 'fira_sanslight', Arial, sans-serif;
-  font-size: 21px;
 }
 
-.menu {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  background-color: #eff3f7;
+.navigation {
+  overflow: hidden;
+  background: #eff3f7;
   border-radius: 4px;
+  margin-bottom: 26px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
 
-.menu-item {
-  position: relative;
-  line-height: 73px;
-  padding-left: 28px;
+
+.navigation .menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.menu-item:first-child {
-  border-radius: 3px 3px 0 0;
-
+.navigation .menu-item {
+ border-top: 2px solid #3ba8c0;
+  margin: 0 11px;
 }
 
-.menu-item:last-child {
-  border-radius: 0 0 3px 3px;
+.navigation .menu-item:first-child{
+  border-top: none;
 }
 
-.menu-item.active {
-  font-size: 22px;
-  background-color: #3ba8c0;
-  color: #ffffff;
+.navigation .menu-item.active {
+  background: #3ba8c0;
+  margin: 0;
+  border-bottom: none;
+  padding-left: 11px;
+  margin-bottom: -2px;
 }
 
-.menu-item:nth-last-child(n+2):after {
-  content : " ";
-  position: absolute;
-  left    : 10px;
-  bottom  : 0;
-  width   : 230px;
-  border-bottom: 2px solid #3ba8c0;
-}
-
-.menu-item>a {
+.navigation .menu-item.active .menu-link {
   text-decoration: none;
   color: #55636e;
 }
 
-.menu-item>a:hover {
+.navigation .menu-link {
+  font-family: 'fira_sansbook';
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: #959aa8;
+  margin-left: 16px;
+  padding: 20px 0px;
+}
+
+
+.navigation .menu-link:hover {
   text-decoration: none;
   color: #3ba8c0;
 }
@@ -313,7 +315,7 @@ body {
   margin-top: 158px;
   width: 650px;
   color: #55636e;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .article {

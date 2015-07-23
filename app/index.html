@@ -25,15 +25,14 @@
 
 <!-- Шапка начало-->
 
-  <div class="header">
+  <header class="header">
     <div class="container-header">
     
-    <a href="index.html" class="logo">
-        <img src="images/logo.png" height="42" width="243" alt="logo">
+    <a href="/" class="logo">
+        <img src="images/logo.png" alt="logo">
       </a>
      
-     <div class="socials texthide">
-          <ul>
+          <ul class="socials">
               <li class="socials-inline">
                 <a href="https://vk.com/bochkoalexander" class="socials-button socials-vk">ВKонтакте</a>
                 </li>
@@ -47,24 +46,28 @@
                 <a href="https://github.com/abochko" class="socials-button socials-git">Гитхаб</a>
                 </li>
             </ul>
-      </div>
     </div>
     <div class="line-gradient"></div>
-  </div>
+  </header>
 
 <!-- Шапка конец-->
 
 <!-- Основной блок начало -->
 
-<main class="summary">
-
     <div class="container-main">
-      <div class="sidebar">
-        <ul class="menu">
-          <li class="menu-item active">Обо мне</li>
-          <li class="menu-item"><a href="#">Мои работы</a></li>
-          <li class="menu-item"><a href="#">Связаться со мной</a></li>
+
+    <aside class="sidebar">
+      <nav class="navigation">
+        
+
+        <ul class="menu-list">
+          <li class="menu-item active"><a href="/" class="menu-link">Обо мне</a></li>
+          <li class="menu-item"><a href="/my-works.html" class="menu-link">Мои работы</a></li>
+          <li class="menu-item"><a href="/contact-me.html" class="menu-link">Связаться со мной</a></li>
         </ul>
+        
+        </nav>
+        
         <ul class="contacts">
           <li class="contacts-header">
             Контакты
@@ -82,32 +85,33 @@
             <a href="skype:balex_rostov?chat">balex_rostov</a>
           </li>
         </ul>
-      </div> 
+    </aside>
+
 
  <section class="section">
         <article class="article">
           <h2 class="h2">Основная информация</h2>
-          <div class="article-body">
-            <img class="article-photo" height="96" width="96" src="images/avatar.jpg" alt="Photo">
+          <div class="article-body clearfix">
+            <img class="article-photo" src="images/avatar.jpg" alt="Александр Бочко">
             <ul class="article-list">
-              <li class="article-item">
-                <span class="article-point">Меня зовут:</span>
-                <span class="article-descript">Александр Бочко</span>
+              <li class="article-item clearfix">
+                <div class="article-point">Меня зовут:</div>
+                <div class="article-descript">Александр Бочко</div>
               </li>
-              <li class="article-item">
-                <span class="article-point">Мой возраст:</span>
-                <span class="article-descript">42 года</span>
+              <li class="article-item clearfix">
+                <div class="article-point">Мой возраст:</div>
+                <div class="article-descript">42 года</div>
               </li>
-              <li class="article-item">
-                <span class="article-point">Мой город:</span>
-                <span class="article-descript">Москва, Россия</span>
+              <li class="article-item clearfix">
+                <div class="article-point">Мой город:</div>
+                <div class="article-descript">Москва, Россия</div>
               </li>
-              <li class="article-item">
-                <span class="article-point">Моя специализация:</span>
-                <span class="article-descript">FRONTEND разработчик</span>
+              <li class="article-item clearfix">
+                <div class="article-point">Моя специализация:</div>
+                <div class="article-descript">FRONTEND разработчик</div>
               </li>
-              <li class="article-item">
-                <span class="article-point">Ключевые навыки:</span>
+              <li class="article-item clearfix">
+                <div class="article-point">Ключевые навыки:</div>
                 <div class="article-skills">
                   <div class="skills">html</div>
                   <div class="skills">css</div>
@@ -125,7 +129,7 @@
 
         <article class="article">
           <h2 class="h2">Опыт работы</h2>
-          <div class="article-body">
+          <div class="article-body clearfix">
             <ul class="article-list">
               <li class="article-item-experience">
                 <i class="article-icon icons bag"></i>
@@ -143,7 +147,7 @@
 
         <article class="article">
           <h2 class="h2">Образование</h2>
-          <div class="article-body">
+          <div class="article-body clearfix">
             <ul class="article-list">
               <li class="article-item-edu">
                 <i class="article-icon icons hat"></i>
@@ -163,16 +167,14 @@
             </ul>
           </div>
         </article>
-      </section>
-
-    </div> 
-  </main> 
+      </section> 
+  </div> 
  </div>
 
 <footer class="footer">
 <div class="line-gradient"></div>
   <div class="container-footer">
-    <a href="#"><i class="lock-unlock icons lock"></i></a>
+    <a href="/login.html"><i class="lock-unlock icons lock"></i></a>
     <p class="copyright">&copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.</p>
   </div>
 </footer>
