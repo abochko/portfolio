@@ -66,6 +66,10 @@
     box-sizing: border-box;
 }
 
+.capcha-img {
+  margin: auto 60px;
+}
+
 .middle {
   vertical-align: middle;
 }
