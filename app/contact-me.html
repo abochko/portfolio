@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <meta name="author" content="Александр Бочко">
+  <meta name="description" content="Домашнее задание №1 от LoftSchool, июнь 2015">
+
+  <title>Александр Бочко. Напишите мне.</title>
+
+  <link rel="stylesheet" href="bower/normalize.css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/my-works.css">
+  <link rel="stylesheet" href="css/contact-me.css">
+  <link rel="stylesheet" href="css/login.css">
+
+  <script src="bower/modernizr/modernizr.js"></script>
+</head>
+<body>
+
+<!--[if lt IE 8]>
+  <p class="browserupgrade">Ваш браузер <strong>устарел</strong>. Пожалуйста, <a href="http://browsehappy.com/">обновите</a> его.</p>
+<![endif]-->
+
+<div class="wrapper clearfix">
+
+<!-- Шапка начало-->
+
+  <header class="header">
+    <div class="container-header">
+    
+    <a href="/" class="logo">
+        <img src="images/logo.png" alt="logo">
+      </a>
+     
+          <ul class="socials">
+              <li class="socials-inline">
+                <a href="https://vk.com/bochkoalexander" class="socials-button socials-vk">ВKонтакте</a>
+                </li>
+              <li class="socials-inline">
+                <a href="https://twitter.com/BochkoAlexander" class="socials-button socials-tw">Твиттер</a>
+                </li>
+              <li class="socials-inline">
+                <a href="https://www.facebook.com/BochkoAlexander" class="socials-button socials-fb">Фейсбук</a>
+                </li>
+              <li class="socials-inline">
+                <a href="https://github.com/abochko" class="socials-button socials-git">Гитхаб</a>
+                </li>
+            </ul>
+    </div>
+    <div class="line-gradient"></div>
+  </header>
+
+<!-- Шапка конец-->
+
+<!-- Основной блок начало -->
+
+    <div class="container-main">
+
+    <aside class="sidebar">
+      <nav class="navigation">
+        <ul class="menu-list">
+          <li class="menu-item"><a href="/" class="menu-link">Обо мне</a></li>
+          <li class="menu-item"><a href="/my-works.html" class="menu-link">Мои работы</a></li>
+          <li class="menu-item active"><a href="/contact-me.html" class="menu-link">Связаться со мной</a></li>
+        </ul>
+        
+        </nav>
+        
+        <ul class="contacts">
+          <li class="contacts-header">
+            Контакты
+          </li>
+          <li class="contacts-mail">
+            <i class="icons mail"></i>
+            <a href="mr.bochko@gmail.com">mr.bochko@gmail.com</a>
+          </li>
+          <li class="contacts-phone">
+            <i class="icons phone"></i>
+            <a href="tel:+79882561270">+79882561270</a>
+          </li>
+          <li class="contacts-skype">
+            <i class="icons skype"></i>
+            <a href="skype:balex_rostov?chat">balex_rostov</a>
+          </li>
+        </ul>
+    </aside>
+
+
+ <section class="section-contact">
+        <div class="section-header-contact">
+          <span class="section-header-text">У вас интересный проект? Напишите мне</span>
+        
+        <div class="form-contact">
+      <form name="register" method="post" action="send.php">
+          
+        <div class="input-contact input-contact-half input-contact-margin">
+          
+            <span class="field-discript">Имя</span>
+            <label class="label-contact" for="name-contact">
+            <input class="input-shift" type="text" id="name-contact" name="name" placeholder="Как к Вам обращаться">
+          </label>
+
+          </div>
+
+          <div class="input-contact input-contact-half">
+          <span class="field-discript">Email</span>
+            <label for="email-contact">
+            <input class="input-shift" type="text" id="email-contact" name="name" placeholder="Куда мне писать">
+          </label>
+          </div>
+        
+         <div class="input-contact">
+          <span class="field-discript">Email</span>
+            <label for="email-contact">
+            <textarea class="input-shift" rows="10" type="text" id="message-contact" name="name" placeholder="Кратко, в чем суть"></textarea>
+          </label>
+          </div>
+         
+          
+          <div class="input-contact">
+           <span class="field-discript">Введите текст, указанный на картинке</span>
+
+           <div class="input-contact input-contact-half input-contact-margin middle">
+           <div class="capcha input-contact-margin">
+             <img src="/capcha.php" alt="Введите этот код">
+           </div>
+           </div>
+       
+
+          <div class="input-contact input-contact-half middle">
+            <input class="input-shift" type="text" id="capcha-contact" name="capcha" placeholder="Введите код">
+          </label>
+          </div>
+          </div>
+          
+          <div class="input-contact">
+            <button type="submit" value="отправить">Отправить</button>
+            <button type="reset" value="очистить">Очистить</button>
+          </div>
+
+        </form>
+        </div>
+
+  </section>
+
+    
+  </div> 
+ </div>
+
+<footer class="footer">
+<div class="line-gradient"></div>
+  <div class="container-footer">
+  <div class="lock-unlock">
+    <a href="/login.html" class="enter icons">Войти</a>
+    </div>
+    <div class="copyright">&copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.</div>
+  </div>
+</footer>
+ 
+
+</body>
+</html>
+  
+  <script src="bower/jquery/dist/jquery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
