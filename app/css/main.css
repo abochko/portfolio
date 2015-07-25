@@ -1,152 +1,152 @@
 
 @font-face {
-    font-family: 'fira_sanslight';
-    src: url('../fonts/firasans-light.eot');
-    src: url('../fonts/firasans-light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/firasans-light.woff') format('woff'),
-         url('../fonts/firasans-light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'fira_sanslight';
+  src: url('../fonts/firasans-light.eot');
+  src: url('../fonts/firasans-light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/firasans-light.woff') format('woff'),
+  url('../fonts/firasans-light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'fira_sansbook';
-    src: url('../fonts/firasans-book.eot');
-    src: url('../fonts/firasans-book.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/firasans-book.woff') format('woff'),
-         url('../fonts/firasans-book.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'fira_sansbook';
+  src: url('../fonts/firasans-book.eot');
+  src: url('../fonts/firasans-book.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/firasans-book.woff') format('woff'),
+  url('../fonts/firasans-book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'fira_sansmedium';
-    src: url('../fonts/firasans-medium.eot');
-    src: url('../fonts/firasans-medium.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/firasans-medium.woff') format('woff'),
-         url('../fonts/firasans-medium.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'fira_sansmedium';
+  src: url('../fonts/firasans-medium.eot');
+  src: url('../fonts/firasans-medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/firasans-medium.woff') format('woff'),
+  url('../fonts/firasans-medium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'proximanova_condensed';
-    src: url('../fonts/ProximaNovaCond-Semibold.otf');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'proximanova_condensed';
+  src: url('../fonts/ProximaNovaCond-Semibold.otf');
+  font-weight: bold;
+  font-style: normal;
 }
 
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: url(../images/bgr.png);
-    width: 100%;
-    font-family: 'fira_sanslight', Arial, sans-serif;
+  background: url(../images/bgr.png);
+  width: 100%;
+  font-family: 'fira_sanslight', Arial, sans-serif;
 }
 
 .clearfix:before, .clearfix:after {
-    content: " "; 
-    display: table;
+  content: " "; 
+  display: table;
 }
- 
+
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 .icons {
-    background-image: url(../images/icons.png);
-    background-repeat: no-repeat;
-    display: block;
-    float: left;
+  background-image: url(../images/icons.png);
+  background-repeat: no-repeat;
+  display: block;
+  float: left;
 }
 
 .wrapper { /* главная обертка */
-    min-width: 970px;
-    height: auto!important;
-    min-height: 100%;
-    position: relative;
+  min-width: 970px;
+  height: auto!important;
+  min-height: 100%;
+  position: relative;
 }
 
 /* ----------- Header Start -------------- */
 
 .header { 
-    position: fixed;
-    width: 100%;
-    height: 119px;
-    background-color: #eff3f7;
-    box-sizing:border-box;
-    margin-bottom: 39px;
-    z-index: 1000;
-    background-image: url(../images/grad.jpg);
-    background-repeat: no-repeat;
-    background-image: linear-gradient(to right, rgba(0,0,0,0), #307386, rgba(0,0,0,0));
-    background-position: 50% 100%;
-    background-size: 100% 3px;
-    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+  position: fixed;
+  width: 100%;
+  height: 119px;
+  background-color: #eff3f7;
+  box-sizing:border-box;
+  margin-bottom: 39px;
+  z-index: 1000;
+  background-image: url(../images/grad.jpg);
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(0,0,0,0), #307386, rgba(0,0,0,0));
+  background-position: 50% 100%;
+  background-size: 100% 3px;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
 }
 
 .container-header { /* контейнер для логотипа и иконок соцсетей */
-    position: relative;
-    margin: auto;
-    height: 100%;
-    width: 1200px;
- }
+  position: relative;
+  margin: auto;
+  height: 100%;
+  width: 1200px;
+}
 
- .logo { /* смещаем в контейнере блок с логотипом влево */
-    position: absolute;
-    top: 39px;
-    left: 0;
- }
+.logo { /* смещаем в контейнере блок с логотипом влево */
+  position: absolute;
+  top: 33px;
+  left: 0;
+}
 
- /* -------------- Socials Start ------------ */
+/* -------------- Socials Start ------------ */
 
 .socials {
-    position: absolute;
-    right: 0;
-    top: 36px;
-    margin: 0;
-    padding: 0;
-    min-width: 260px;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  margin: 0;
+  padding: 0;
+  min-width: 260px;
 }
 
 .socials-inline { 
-    list-style: none;
-    display: inline-block;
-    text-indent: -9999px;
+  list-style: none;
+  display: inline-block;
+  text-indent: -9999px;
 }
 
 .socials .socials-inline:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .socials-button {
-    background: url(../images/socials.png) repeat 0;
-    display: block;
-    width: 47px;
-    height: 47px;
-    margin-left: 24px;
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    -ms-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -o-transition-property: -o-transform;
-    -ms-transition-property: -ms-transform;
-    transition-property: transform;    
+  background: url(../images/socials.png) repeat 0;
+  display: block;
+  width: 47px;
+  height: 47px;
+  margin-left: 24px;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;    
 }
 
 .socials-button:hover {
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .socials-vk {background-position: -5px -119px;}
@@ -195,7 +195,7 @@ body {
 }
 
 .navigation .menu-item {
- border-top: 2px solid #3ba8c0;
+  border-top: 2px solid #3ba8c0;
   margin: 0 11px;
 }
 
@@ -288,21 +288,21 @@ body {
 }
 
 .mail {
-    width: 21px;
-    height: 20px;
-    background-position: -5px -89px;
+  width: 21px;
+  height: 20px;
+  background-position: -5px -89px;
 }
 
 .phone {
-    width: 21px;
-    height: 20px;
-    background-position: -36px -89px;
+  width: 21px;
+  height: 20px;
+  background-position: -36px -89px;
 }
 
 .skype {
-    width: 21px;
-    height: 20px;
-    background-position: -67px -89px;
+  width: 21px;
+  height: 20px;
+  background-position: -67px -89px;
 }
 
 /* -------------------- Section -------------------- */
@@ -406,9 +406,9 @@ body {
 }
 
 .bag {
-    width: 41px;
-    height: 34px;
-    background-position: -5px -5px;
+  width: 41px;
+  height: 34px;
+  background-position: -5px -5px;
 }
 
 .article-icon {
@@ -438,15 +438,15 @@ body {
 }
 
 .hat {
-    width: 41px;
-    height: 23px;
-    background-position: -56px -5px;
+  width: 41px;
+  height: 23px;
+  background-position: -56px -5px;
 }
 
 .cert {
-    width: 41px;
-    height: 32px;
-    background-position: -56px -38px;
+  width: 41px;
+  height: 32px;
+  background-position: -56px -38px;
 }
 
 /* -------------------- Footer -------------------- */
@@ -488,8 +488,8 @@ body {
 }
 
 .lock-unlock .enter:hover {
-    text-decoration: underline;   
-    background-position: -107px -47px;
+  text-decoration: underline;   
+  background-position: -107px -47px;
 }
 
 .copyright {
@@ -500,6 +500,3 @@ body {
   font-family: 'fira_sanslight', Arial, sans-serif;
   font-size: 13px;
 }
-
-
-
