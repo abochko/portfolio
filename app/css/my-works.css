@@ -138,6 +138,14 @@
     border-bottom: 15px solid #67dffa;
 }
 
+.field-discript-ext {
+    position: absolute;
+    margin: 10px 10px;
+    font-family: 'fira_sanslight';
+    color: #48cbe8;
+    font-size: 13px;
+}
+
 .modal-form {
 	width: 90%;
     margin: 15px auto 0 auto;
@@ -167,7 +175,6 @@
     background: #48cbe8 url(../images/upload.png) center center no-repeat;
 }
 
-.fileform::after {content: 'Загрузить изображение';}
  
 .fileform #upload{
     position:absolute; 
