@@ -1,0 +1,281 @@
+.section-works {
+    margin: 25px auto;
+    max-width: 639px;
+}
+
+.workpad {
+    width: 183px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    margin: 0 13px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.workpad-img {
+    height: 129px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 2px solid #3ba8c0;
+    background: #fff;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.workpad-img:hover .workpad-img-skin {
+    opacity: 1;
+}
+
+.workpad-img:hover .workpad-img-name {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.workpad-img-skin:before,
+.work_block_img_Add:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.workpad-img-ad {
+    height: 127px;
+    width: 181px;
+    position: relative;
+    z-index: 1;
+}
+
+.workpad-img-skin {
+    background: #016ca4;
+    background: rgba(1, 108, 164, .75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: default;
+    opacity: 0;
+    -webkit-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+.workpad-img-name {
+    text-decoration: none;
+    line-height: 15px;
+    color: #eff3f7;
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 6px;
+    border: 2px solid #eff3f7;
+    padding: 3px 7px;
+    vertical-align: middle;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all ease .3s .2s;
+    transition: all ease .3s .2s;
+}
+
+.workpad-site-ref {
+    text-decoration: none;
+    font-family: 'fira_sansitalic', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    color: #47adc4;
+    font-weight: normal;
+}
+
+.workpad-site-info {
+    margin: 0;
+    font-family: 'fira_sanslight', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    color: #4a545d;
+    padding: 0 10px;
+}
+
+.workpad-add-project {
+	background: #edf8fc;
+	border: 1px dashed #3ba8c0;
+	display: block;
+}
+
+.workpad-text {
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 43px;
+	background: url(../images/workpad-add.png) center top no-repeat;
+	font-family: 'fira_sanslight';
+	font-size: 13px;
+	line-height: 16px;
+	color: #3ba8c0;
+	cursor: pointer;
+}
+
+.workpad-add-project:before {
+	content: '';
+  	display: inline-block;
+  	height: 100%;
+  	vertical-align: middle;
+  }
+
+.add-new-project {
+    color: #fff;
+    font-weight: normal;
+    font-size: 22px;
+    background-color: #48cbe8;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 20px;
+    border-bottom: 15px solid #67dffa;
+}
+
+.modal-form {
+	width: 90%;
+    margin: 15px auto 0 auto;
+}
+
+.fileform { 
+
+    background-color: #FFFFFF;
+    border: 1px solid #48cbe8;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 42px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    width: auto;
+}
+ 
+.fileform .selectbutton { 
+    background-color: #48cbe8;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    float: right;
+    width: 60px;
+    height: 42px;
+    background: #48cbe8 url(../images/upload.png) center center no-repeat;
+}
+
+.fileform::after {content: 'Загрузить изображение';}
+ 
+.fileform #upload{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    -moz-opacity: 0; 
+    filter: alpha(opacity=0); 
+    opacity: 0; 
+}
+
+.button.add-center {
+    display: block;
+    margin: 0 auto;   
+}
+
+input::-webkit-input-placeholder {color: #67dffa;}
+input:-moz-placeholder {color: #67dffa;}
+textarea::-webkit-input-placeholder {color: #67dffa;}
+textarea:-moz-placeholder {color: #67dffa;}
+
+.input-shift::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+.input-shift::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+.input-shift:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+.input-shift:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+.input-shift:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+.input-shift:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+.input-shift:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+.input-shift:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+
+
+/* Модальное окно
+
+/* Базовые стили слоя затемнения и модального окна  */
+.overlay {
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 999;
+visibility: hidden;
+/* фон затемнения */
+background-color: rgba(0, 0, 0, 0.7);
+opacity: 0;
+position: fixed; /* фиксированное поцизионирование */
+cursor: default; /* тип курсара */
+-webkit-transition: opacity .5s;
+-moz-transition: opacity .5s;
+-ms-transition: opacity .5s;
+-o-transition: opacity .5s;
+transition: opacity .5s;
+}
+.overlay:target {
+visibility: visible;
+opacity: 1;
+}
+/* стили модального окна */
+.popup {
+top: 0;
+right: 0;
+left: 0;
+font-size: 14px;
+z-index: 1000;
+display: block;
+visibility: hidden;
+margin: 0 auto;
+width: 100%;
+max-width: 370px;
+background-color: #eff3f7;
+/* фиксированное позиционирование, окно стабильно при прокрутке */
+position: fixed;
+border: 1px solid #383838;
+/* скругление углов */
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+/* внешняя тень */
+-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+-ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+-o-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+/* полная прозрачность окна, появление при клике */
+opacity: 0;
+/* эффект перехода (появление) */
+-webkit-transition: all ease .5s;
+-moz-transition: all ease .5s;
+-ms-transition: all ease .5s;
+-o-transition: all ease .5s;
+transition: all ease .5s;
+}
+.overlay:target+.popup {
+top: 20%;
+visibility: visible;
+opacity: 1;
+}
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    background: url(../images/close.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+
