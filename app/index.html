@@ -65,18 +65,18 @@
           </ul>
         </nav>
         <ul class="contacts">
-          <li class="contacts-header">
+          <li class="contacts-main contacts-header">
             Контакты
           </li>
-          <li class="contacts-mail">
+          <li class="contacts-main contacts-mail">
             <i class="icons mail"></i>
             <a href="mr.bochko@gmail.com">mr.bochko@gmail.com</a>
           </li>
-          <li class="contacts-phone">
+          <li class="contacts-main contacts-phone">
             <i class="icons phone"></i>
             <a href="tel:+79882561270">+79882561270</a>
           </li>
-          <li class="contacts-skype">
+          <li class="contacts-main contacts-skype">
             <i class="icons skype"></i>
             <a href="skype:balex_rostov?chat">balex_rostov</a>
           </li>
@@ -88,9 +88,14 @@
         <article class="article">
           <h2 class="h2">Основная информация</h2>
           <div class="article-body clearfix">
+          <div class="article-photo-wrap">
+          <div class="article-photo-box">
             <img class="article-photo" src="images/avatar.jpg" alt="Александр Бочко">
+            </div>
+            </div>
+            <div class="article-list-wrap">
             <ul class="article-list">
-              <li class="article-item">
+              <li class="article-item clearfix">
                 <div class="article-point">Меня зовут:</div>
                 <div class="article-descript">Александр Бочко</div>
               </li>
@@ -120,12 +125,14 @@
                 </div>
               </li>
             </ul>
+            </div>
           </div>
         </article>
 
         <article class="article">
           <h2 class="h2">Опыт работы</h2>
           <div class="article-body clearfix">
+          <div class="about-list-wrap">
             <ul class="article-list">
               <li class="article-item-experience">
                 <i class="article-icon icons bag"></i>
@@ -138,16 +145,18 @@
                 <p class="article-date">2013 - по н.в.</p>
               </li>
             </ul>
+            </div>
           </div>
         </article>
 
         <article class="article">
           <h2 class="h2">Образование</h2>
           <div class="article-body clearfix">
+          <div class="about-list-wrap">
             <ul class="article-list">
               <li class="article-item-edu">
                 <i class="article-icon icons hat"></i>
-                <p class="article-edu">Высшее, РГУПС, ATC</p>
+                <p class="article-edu">Высшее, Ростовский государственный университет путей сообщений, факультет "Автоматика, телемеханика и связь"</p>
                 <p class="article-date">1991 - 1995</p>
               </li>
               <li class="article-item-edu">
@@ -161,6 +170,7 @@
                 <p class="article-date">2015</p>
               </li>
             </ul>
+            </div>
           </div>
         </article>
       </section>
@@ -181,5 +191,7 @@
 
 <script src="bower/jquery/dist/jquery.js"></script>
 <script src="js/main.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="bower/bpopup/jquery.bpopup.min.js"></script>
 </body>
 </html>

@@ -103,186 +103,135 @@
 }
 
 .workpad-add-project {
-	background: #edf8fc;
-	border: 1px dashed #3ba8c0;
 	display: block;
+    width: 144px;
+    border: 2px dashed #3ba8c0;
+    border-radius: 6px;
+    padding: 32px 16px;
+    background-color: #edf8fc;
 }
 
 .workpad-text {
-	display: inline-block;
-	vertical-align: middle;
-	padding-top: 43px;
-	background: url(../images/workpad-add.png) center top no-repeat;
-	font-family: 'fira_sanslight';
-	font-size: 13px;
-	line-height: 16px;
-	color: #3ba8c0;
-	cursor: pointer;
+	font-family: 'fira_sanslight', Arial, sans-serif;
+    font-size: 13px;
+    color: #3ba8c0;
+   }
+
+#add-new-item {
+    text-decoration: none;
 }
 
 .workpad-add-project:before {
-	content: '';
-  	display: inline-block;
-  	height: 100%;
-  	vertical-align: middle;
+	content: url('../images/workpad-add.png');
+    width: 32px;
+    height: 32px;
+    vertical-align: top;
   }
 
-.add-new-project {
-    color: #fff;
-    font-weight: normal;
-    font-size: 22px;
-    background-color: #48cbe8;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    padding: 10px 20px;
-    border-bottom: 15px solid #67dffa;
+/* модальное окно */
+
+.container-add-project{
+    text-align: center;
 }
-
-.field-discript-ext {
-    position: absolute;
-    margin: 10px 10px;
-    font-family: 'fira_sanslight';
-    color: #48cbe8;
-    font-size: 13px;
+#add-project-popup{
+    display: none;
 }
-
-.modal-form {
-	width: 90%;
-    margin: 15px auto 0 auto;
+.modal-wrapper{
+    display: inline-block;
+    min-width: 360px;
+    height: auto;
+    text-align: center;
+    box-shadow: 0px 3px 7px 1px rgba(0,0,0,0.3);
+    border-radius:0 0 4px 4px;
 }
-
-.fileform { 
-
-    background-color: #FFFFFF;
-    border: 1px solid #48cbe8;
-    border-radius: 3px;
-    cursor: pointer;
-    height: 42px;
-    overflow: hidden;
+.modal-header{
     position: relative;
-    text-align: left;
-    vertical-align: middle;
-    width: auto;
-}
- 
-.fileform .selectbutton { 
+    padding: 5px 14px 0px;
     background-color: #48cbe8;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    float: right;
-    width: 60px;
-    height: 42px;
-    background: #48cbe8 url(../images/upload.png) center center no-repeat;
+    border-bottom: 9px solid #67dffa;
+    margin: 0;
+    border-radius: 4px 4px 0 0;
+    text-align: left;
 }
-
- 
-.fileform #upload{
-    position:absolute; 
-    top:0; 
-    left:0; 
-    width:100%; 
-    -moz-opacity: 0; 
-    filter: alpha(opacity=0); 
-    opacity: 0; 
+.modal-header h3{
+    font-family: 'fira_sansbook', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 27x;
+    color: #ffffff;
+    margin: 5px;
 }
-
-.button.add-center {
-    display: block;
-    margin: 0 auto;   
-}
-
-input::-webkit-input-placeholder {color: #67dffa;}
-input:-moz-placeholder {color: #67dffa;}
-textarea::-webkit-input-placeholder {color: #67dffa;}
-textarea:-moz-placeholder {color: #67dffa;}
-
-.input-shift::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-.input-shift::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-.input-shift:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-.input-shift:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-.input-shift:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-.input-shift:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-.input-shift:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-.input-shift:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
-
-
-
-/* Модальное окно
-
-/* Базовые стили слоя затемнения и модального окна  */
-.overlay {
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-z-index: 999;
-visibility: hidden;
-/* фон затемнения */
-background-color: rgba(0, 0, 0, 0.7);
-opacity: 0;
-position: fixed; /* фиксированное поцизионирование */
-cursor: default; /* тип курсара */
--webkit-transition: opacity .5s;
--moz-transition: opacity .5s;
--ms-transition: opacity .5s;
--o-transition: opacity .5s;
-transition: opacity .5s;
-}
-.overlay:target {
-visibility: visible;
-opacity: 1;
-}
-/* стили модального окна */
-.popup {
-top: 0;
-right: 0;
-left: 0;
-font-size: 14px;
-z-index: 1000;
-display: block;
-visibility: hidden;
-margin: 0 auto;
-width: 100%;
-max-width: 370px;
-background-color: #eff3f7;
-/* фиксированное позиционирование, окно стабильно при прокрутке */
-position: fixed;
-border: 1px solid #383838;
-/* скругление углов */
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
--ms-border-radius: 5px;
-border-radius: 5px;
-/* внешняя тень */
--webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
--moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
--ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
--o-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
-/* полная прозрачность окна, появление при клике */
-opacity: 0;
-/* эффект перехода (появление) */
--webkit-transition: all ease .5s;
--moz-transition: all ease .5s;
--ms-transition: all ease .5s;
--o-transition: all ease .5s;
-transition: all ease .5s;
-}
-.overlay:target+.popup {
-top: 20%;
-visibility: visible;
-opacity: 1;
-}
-/* формируем кнопку закрытия */
-.close {
+.btn-close{
+    background: url('../images/close.png') no-repeat;
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 10px;
+    left: 327px;
+    border-radius: 50% 50%;
     width: 25px;
     height: 25px;
-    background: url(../images/close.png) no-repeat;
-    background-size: contain;
-    background-position: center;
+    border: none;
+    background-color: #48cbe8;
+}
+.btn-close:focus{
+    outline: none;
+}
+.modal-body{
+    background-color: #eff3f7;
+    padding: 10px 20px;
+    border-radius:0 0 4px 4px;
+}
+
+.proj-item {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.btn-add{
+    padding:0 27px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.textarea-padding {
+    margin-bottom: 20px;
+}
+.upload {
+    position: relative;
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    background: #fbfcfd;
+    display: block;
     cursor: pointer;
+}
+.upload:after {
+    content: '';
+    cursor: pointer;
+    overflow: hidden;
+    width: 50px;
+    height: 100%;
+    background: #48cbe8 url('../images/upload.png') center center no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+input[type="file"] {
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.upload .upload-img {
+    cursor: pointer;
+    color: #48cbe8;
+    font-size: 13px;
+    line-height: 23px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 100;
 }
 

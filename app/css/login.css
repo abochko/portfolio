@@ -1,19 +1,26 @@
-.login {
-	width: 90%;
-	max-width: 600px;
-	text-align: center;
-	margin: 0 auto;
-	border-radius: 3px;
+.login_main_wrap {
+	position: relative;
+	height: 100%;
 }
+
+.login {
+	position: absolute;
+	width: 590px;
+	top: 50%;
+	left: 50%;
+	margin-top: -282px;
+	margin-left: -295px;
+	background-color: #EFF3F7;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
 .login_main {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
 }
-.login_main_wrap {
-	display: table;
-	min-width: 100%;
-}
+
 .login .section_header {
 	padding: 28px 20px 26px;
 	margin-bottom: 20px;

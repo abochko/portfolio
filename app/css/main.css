@@ -37,15 +37,15 @@
     font-style: normal;
 }
 
-html,
+html {
+    height: 100%;
+}
+
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-body {
-    background: url(../images/bgr.png);
+    background: url(../images/bgr.png) repeat scroll 0% 0%;;
     width: 100%;
     font-family: 'fira_sanslight', Arial, sans-serif;
 }
@@ -65,6 +65,7 @@ body {
     background-repeat: no-repeat;
     display: block;
     float: left;
+    margin-top: 5px;
 }
 
 .wrapper {
@@ -79,19 +80,18 @@ body {
 /* ----------- Header Start -------------- */
 
 .header {
-    position: fixed;
+    position: relative;
     width: 100%;
     height: 119px;
     background-color: #eff3f7;
     box-sizing: border-box;
     margin-bottom: 39px;
-    z-index: 10;
     background-image: url(../images/grad.jpg);
     background-repeat: no-repeat;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #307386, rgba(0, 0, 0, 0));
     background-position: 50% 100%;
     background-size: 100% 3px;
-    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, .2);
 }
 
 .container-header {
@@ -208,9 +208,8 @@ body {
 /* -------------------- Sidebar -------------------- */
 
 .sidebar {
-    position: fixed;
+    position: relative;
     float: left;
-    margin-top: 158px;
     width: 250px;
 }
 
@@ -247,7 +246,7 @@ body {
 
 .navigation .menu-item.active .menu-link {
     text-decoration: none;
-    color: #55636e;
+    color: #fff;
 }
 
 .navigation .menu-link {
@@ -276,40 +275,32 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
 
+.contacts-main {
+    padding: 10px 0 10px 20px;
+}
+
 .contacts-header {
     border-radius: 3px 3px 0 0;
-    line-height: 40px;
-    padding-left: 30px;
     background-color: #3ba8c0;
+    font-size: 22px;
+    padding-left: 30px;
 }
 
 .contacts-mail {
-    height: 35px;
-    padding-left: 20px;
-    padding-top: 8px;
     background-color: #41b9d4;
-    font-style: normal;
 }
 
 .contacts-phone {
-    height: 35px;
-    padding-left: 20px;
-    padding-top: 8px;
     background-color: #48cbe8;
-    font-style: normal;
 }
 
 .contacts-skype {
     border-radius: 0 0 4px 4px;
-    height: 35px;
-    padding-left: 20px;
-    padding-top: 8px;
     background-color: #51daf8;
-    font-style: normal;
 }
 
 .contacts a {
-    vertical-align: top;
+    vertical-align: middle;
     padding-left: 20px;
     text-decoration: none;
     font-size: 16px;
@@ -343,7 +334,6 @@ body {
 
 .section {
     float: right;
-    margin-top: 158px;
     width: 650px;
     color: #55636e;
     margin-bottom: 15px;
@@ -351,71 +341,88 @@ body {
 }
 
 .article {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
+    margin-bottom: 26px;
     background-color: #eff3f7;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
 
 .h2 {
-    margin: 0;
-    padding: 0 20px 0 20px;
-    display: inline-block;
-    line-height: 67px;
-    border-bottom: 2px solid #3ba8c0;
-    color: #3ba8c0;
-    font-family: 'fira_sansbook', Arial, sans-serif;
+    font-family: "fira_sansbook";
     font-size: 27px;
     font-weight: normal;
+    color: #3BA8C0;
+    border-bottom: 2px solid #3BA8C0;
+    margin: 0px 0px 23px;
+    padding: 13px 23px;
+    display: inline-block;
 }
 
 .article-body {
-    padding-left: 55px;
-    padding-top: 18px;
+    padding-bottom: 40px;
+}
+
+.article-photo-wrap {
+    float: left;
+    margin-left: 55px;
+    margin-top: 18px;
+}
+
+.article-photo-box {
+    overflow: hidden;
+    border: 5px solid #3ba8c0;
+    border-radius: 50%;
+    width: 142px;
+    height: 142px;
 }
 
 .article-photo {
-    display: inline-block;
-    margin-top: 17px;
-    border: 3px solid #3ba8c0;
-    border-radius: 50%;
+    width: 100%;
 }
 
+.article-list-wrap {
+    float: right;
+    width: 400px;
+}
+
+.about-list-wrap {
+   list-style: outside none none;
+    padding: 0px 0px 0px 50px;
+    margin: 0px;
+}
+
+
 .article-list {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    vertical-align: top;
-    list-style-type: none;
+    list-style: outside none none;
+    padding: 0px;
+    margin: 0px;
 }
 
 .article-item {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .article-point {
-    display: inline-block;
-    vertical-align: baseline;
-    padding-left: 20px;
-    font-family: 'fira_sansmedium', Arial, sans-serif;
-    font-size: 17px;
-    font-weight: normal;
+    font-family: 'fira_sansmedium';
+    font-size: 16px;
+    float: left;
 }
 
+
 .article-descript {
-    display: inline-block;
-    vertical-align: baseline;
-    padding-left: 13px;
-    font-family: 'fira_sansbook', Arial, sans-serif;
-    font-size: 16px;
+   font-family: 'fira_sansbook';
+    font-size: 15px;
+    overflow: hidden;
+    max-width: 218px;
+    float: left;
+    margin-left: 25px;
 }
 
 .article-skills {
     display: inline-block;
     vertical-align: top;
     width: 230px;
-    padding-left: 13px;
+    margin-left: 25px;
     font-family: 'fira_sansbook', Arial, sans-serif;
     font-size: 13px;
 }
@@ -457,12 +464,12 @@ body {
 
 .article-icon {
     float: left;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .article-item-experience,
 .article-item-edu {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .article-experience,
@@ -470,8 +477,8 @@ body {
     margin: 0;
     padding: 0 50px 0 70px;
     font-family: 'fira_sansbook', Arial, sans-serif;
-    font-size: 17px;
-    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
 }
 
 .article-date {
@@ -479,11 +486,12 @@ body {
     padding: 0;
     padding-left: 70px;
     font-family: 'fira_sanslight', Arial, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: normal;
 }
 
 .hat {
+    margin-top: 10px;
     width: 41px;
     height: 23px;
     background-position: -56px -5px;
@@ -502,7 +510,7 @@ body {
     width: 100%;
     line-height: 80px;
     background-color: #eff3f7;
-    box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, .2);
+    box-shadow: 0 -1px 4px 0px rgba(0, 0, 0, .2);
     background-image: url(../images/grad.jpg);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #307386, rgba(0, 0, 0, 0));
     background-repeat: no-repeat;
